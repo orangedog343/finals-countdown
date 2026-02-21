@@ -1,0 +1,86 @@
+body {
+    background-color: hsl(0, 0%, 10%);
+    margin: 0;
+    color: white;
+}
+.container {
+    display : flex;
+    gap : 20px;
+    justify-content : center;
+}
+.subject {
+    padding : 20px;
+    border-radius : 12px;
+    margin : 10px 0;
+    color : white;
+}
+.subject h1{
+    text-align : center;
+}
+
+.subject.science{
+    --h : 300;
+    --s : 80%;
+    background : hsl(var(--h), var(--s), 30%)
+}
+.subject.maths {
+    --h : 200;
+    --s : 70%;
+    background : hsl(var(--h), var(--s), 30%);
+}
+.subject.fifth {
+    --h : 0;
+    --s : 0%;
+    background : hsl(var(--h), var(--s), 30%);
+}
+.subject.kannada {
+    --h : 17;
+    --s : 80%;
+    background : hsl(var(--h), var(--s), 30%);
+}
+
+.paper {
+    background : hsl(var(--h), var(--s), 35%);
+    padding : 15px;
+    border-radius : 6px;
+    margin-bottom : 15px;
+    display : flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.paper-details {
+    display : flex;
+    flex-direction : column;
+    padding-right : 10px;
+    justify-content : center;
+}
+.paper-name {
+    font-weight : bold;
+    margin-bottom : 5px;
+}
+.paper-date {
+    font-size : 0.85rem;
+    color : hsl(0, 0%, 85%);
+}
+.countdown {
+    background : hsl(var(--h), var(--s), 40%);
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right : 10px;
+    text-align: center;
+    font-weight: bold;
+    display : flex;
+    align-items : center;
+    flex-direction : column;
+    justify-content : center;
+}
+.count-number {
+    font-size : 1.2rem;
+    margin-top : 5px;
+}
+.count-label {
+    font-size : 0.85rem;
+    font-weight : normal;
+    margin-top : 5px;
+    margin-bottom : 5px;
+}
