@@ -29,16 +29,22 @@ body {
     --s : 70%;
     background : hsl(var(--h), var(--s), 30%);
 }
-.subject.fifth {
-    --h : 0;
-    --s : 0%;
+.subject.fle {
+    --h : 50;
+    --s : 70%;
     background : hsl(var(--h), var(--s), 30%);
 }
-.subject.kannada {
-    --h : 17;
-    --s : 80%;
+.subject.gp {
+    --h : 30;
+    --s : 70%;
     background : hsl(var(--h), var(--s), 30%);
 }
+.subject.evm {
+    --h : 125;
+    --s : 70%;
+    background : hsl(var(--h), var(--s), 30%);
+}
+
 
 .paper {
     background : hsl(var(--h), var(--s), 35%);
