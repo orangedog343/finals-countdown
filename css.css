@@ -45,6 +45,13 @@ body {
     background : hsl(var(--h), var(--s), 30%);
 }
 
+.subject.history {
+    --h : 250;
+    --s : 70%;
+    background: hsl(var(--h), var(--s), 30%);
+
+}
+
 
 .paper {
     background : hsl(var(--h), var(--s), 35%);
