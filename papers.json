@@ -1,0 +1,86 @@
+{
+  "Coordinated Science": {
+    "color": {
+      "hue": 300,
+      "saturation": 80
+    },
+    "papers": {
+      "2": {
+        "name": "MCQ",
+        "time": "2026-10-01T09:00:00+05:30"
+      },
+      "4": {
+        "name": "Theory",
+        "time": "2026-10-05T10:30:00+05:30"
+      },
+      "6": {
+        "name": "ATP",
+        "time": "2026-10-06T09:00:00+05:30"
+      }
+    },
+    "code": "0654"
+  },
+  "EVM": {
+    "color": {
+      "hue": 125,
+      "saturation": 70
+    },
+    "papers": {
+      "1": {
+        "name": "Theory",
+        "time": "2026-09-30T09:00:00+05:30"
+      },
+      "2": {
+        "name": "Case Study",
+        "time": "2026-10-01T09:00:00+05:30"
+      }
+    },
+    "code": "0680"
+  },
+  "Mathematics": {
+    "color": {
+      "hue": 200,
+      "saturation": 70
+    },
+    "papers": {
+      "2": {
+        "name": "Non-Calc",
+        "time": "2026-09-28T09:00:00+05:30"
+      },
+      "4": {
+        "name": "Calc",
+        "time": "2026-09-29T09:00:00+05:30"
+      }
+    },
+    "code": "0580"
+  },
+  "English": {
+    "color": {
+      "hue": 50,
+      "saturation": 70
+    },
+    "papers": {
+      "1": {
+        "name": "Reading",
+        "time": "2026-09-25T09:00:00+05:30"
+      },
+      "2": {
+        "name": "Writing",
+        "time": "2026-10-07T13:00:00+05:30"
+      }
+    },
+    "code": "0500"
+  },
+  "GP": {
+    "color": {
+      "hue": 30,
+      "saturation": 70
+    },
+    "papers": {
+      "2": {
+        "time": "2026-10-07T09:00:00+05:30"
+      }
+    },
+    "code": "0457"
+  }
+}

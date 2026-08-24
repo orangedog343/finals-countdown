@@ -14,38 +14,11 @@ body {
     border-radius : 12px;
     margin : 10px 0;
     color : white;
+    background : hsl(var(--h), var(--s), 30%);
 }
 .subject h1{
     text-align : center;
 }
-
-.subject.science{
-    --h : 300;
-    --s : 80%;
-    background : hsl(var(--h), var(--s), 30%)
-}
-.subject.maths {
-    --h : 200;
-    --s : 70%;
-    background : hsl(var(--h), var(--s), 30%);
-}
-.subject.fle {
-    --h : 50;
-    --s : 70%;
-    background : hsl(var(--h), var(--s), 30%);
-}
-.subject.gp {
-    --h : 30;
-    --s : 70%;
-    background : hsl(var(--h), var(--s), 30%);
-}
-.subject.evm {
-    --h : 125;
-    --s : 70%;
-    background : hsl(var(--h), var(--s), 30%);
-}
-
-
 .paper {
     background : hsl(var(--h), var(--s), 35%);
     padding : 15px;
