@@ -1,0 +1,96 @@
+.options{
+  text-align : center;
+  font-size : 2.5em;
+  padding : 20px 20px;
+}
+.option-label{
+  padding-block : 14px
+}
+.options small{
+  color : #AAA;
+}
+.options label small{
+  color : #888;
+}
+/* stuff from here till next comment is vibe coded and edited by me
+beacuse i couldnt find any good resource for how to style these dumb buttons and
+im too lazy to learn how to rn*/
+.options input[type="radio"] {
+    display: none;
+}
+
+.options label {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 black;
+
+    background: black;
+    color: white;
+
+    font-family: monospace;
+    font-size: 1.6rem;
+
+    cursor: pointer;
+
+    transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.options label:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 black;
+}
+
+.options label:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 black;
+}
+
+.options input[type="radio"]:checked + label {
+    background: white;
+    color: black;
+}
+
+/* not vibecoded anymore*/
+.vertical label{
+  display : block;
+  width : 240px;
+  margin : auto;
+  margin-top : 8px;
+}
+
+.fifth label{
+  display : flex;
+}
+.fifth label small{
+  margin-left : auto;
+}
+#generate {
+  background : black;
+  color : white;
+  font-family : monospace;
+  font-size : 2.5rem;
+  border : 2px solid black;
+  cursor : pointer;
+  padding : 5px 10px;
+}
+hr{
+  margin : 20px auto;
+}
+#link-dialog{
+  width:45vw;
+  height : 30vh;
+  font-size : 3rem;
+  background : black;
+  color : white;
+}
+#link-dialog button{
+  font-size : 2rem;
+}
+#link-output{
+  font-size : 2rem;
+  width : 45vw;
+  margin-bottom : 10px;
+}

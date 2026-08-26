@@ -10,12 +10,29 @@ function filter_papers(papers){
   const taken_subs = [];
   const taken_papers = {};
   const hash = window.location.hash
+  if (hash === ""){
+    console.log("No hash.");
+    window.location.href = "subject_choices.html";
+  }
   const hash_parts = hash.slice(1).split("/");
   const zone = hash_parts[0];
+  if (zone === "all"){
+    for (const subj in papers){
+      sub_obj = papers[subj];
+      for (const paper in sub_obj.papers){
+        console.log(`${paper}`);
+        sub_obj.papers[`p${paper}`] = sub_obj.papers[paper];
+        delete sub_obj.papers[paper];
+
+      }
+    }
+    return papers;
+  }
  console.log(hash_parts);
  hash_parts.shift();
-  console.log(hash_parts);
-  if (zone != "4"){
+ console.log(hash_parts);
+  if (zone !== "4"){
+    console.log(zone)
     throw new Error("Zone has to be 4");
   }
   console.log(`zone : ${zone}`);

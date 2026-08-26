@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Midterms Countdown</title>
+        <link rel="stylesheet" href="css.css">
+        <link rel="stylesheet" href="subj_choices.css">
+        <script src="subject_choices.js" defer></script> 
+    </head>
+    <body>
+    <center><h1 style="font-size : 3em;">Choose your Subjects:</h1></center>
+    <div class="options">
+      <div class="option-label">Mathematics <small>(0580)</small>:<br></div>
+    <input type="radio" name="0580" id="0580core" value="core">
+    <label for="0580core">Core</label>
+
+    <input type="radio" name="0580" id="0580extended" value="extended" checked>
+    <label for="0580extended">Extended</label>
+    </div>
+
+    <div class="vertical options">
+      <div class="option-label"> Science: <br> </div>
+      <input type="radio" name = "sci" id = "combcore" value="0653core">
+      <label for="combcore">Core Combined</label>
+
+      <input type="radio" name = "sci" id = "combext" value = "0653ext" checked>
+      <label for="combext">Extended Combined</label>
+
+      <input type="radio" name = "sci" id = "coord" value = "0654">
+      <label for="coord">Coordinated</label>
+    </div>
+
+    <div class="vertical options fifth">
+      Fifth Subject: <br>
+      <input type="radio" name= "fifth" id = "evm" value = "0680">
+      <label for="evm">EVM <small>(0680)</small></label>
+
+      <input type="radio" name="fifth" id="history" value = "0470">
+      <label for="history">History <small>(0470)</small></label>
+      
+      <input type="radio" name="fifth" id="art" value="0400">
+      <label for="art"> Art <small>(0400)</small></label>
+
+      <input type="radio" name="fifth" id="fn" value = "0648">
+      <label for="fn">F&N <small>(0648)</small></label>
+    </div>
+    <hr>
+    <center><button id="generate">Generate Link</button>
+    <dialog id = "link-dialog">
+        <p>Generated Link:</p>
+        <input id="link-output" readonly>
+        <br>
+        <button id="copy">Copy</button>
+        <button id="jump">Jump</button>
+        <button id="close">Close</button>
+    </dialog>
+    <br><h2>Note : You can reuse the same link later.</h2></center>
+    </body>
+</html>
