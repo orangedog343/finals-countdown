@@ -1,5 +1,6 @@
 const dates = [];
 let countNumbers = [];
+let countLabels = [];
 async function loadPapers() {
     const response = await fetch("papers.json");
     const papers = await response.json();
@@ -85,6 +86,7 @@ function displayPapers(papers){
     //if (!taken_subs.includes(sub_obj.code)) continue;
     html += `<div class="subject" style="--h : ${sub_obj.color.hue}; --s : ${sub_obj.color.saturation}%;">\n`;
     html += `<h1>${subject}</h1>\n`;
+    html += `<small>(${sub_obj.code})</small>`
     for (let paper in sub_obj.papers){
       let paper_dat = sub_obj.papers[paper];
       //if (!taken_papers.includes(`${sub_obj.code}p${paper}`)) continue;
@@ -109,6 +111,7 @@ function displayPapers(papers){
   console.log(`Generated HTML : \n ${html}`);
   document.getElementById("subjects").innerHTML = html;
   countNumbers = document.querySelectorAll(".count-number");
+  countLabels = document.querySelectorAll(".count-label");
   updatePapers();
 }
 function formatDate(date){
@@ -127,21 +130,38 @@ function formatDate(date){
     const minutes = date.getMinutes().toString().padStart(2, "0");
     return `${weekday}, ${day}${suffix} ${month} at ${hours}:${minutes}${apm}`;
 }
-function daysLeft(date){
+function timeLeft(date){
     const now = new Date();
     let diffMs = date - now;
-    if (diffMs <= 0) return "-";
-    return Math.floor(diffMs / (24 * 60 * 60 * 1000));
+    if (diffMs <= 0) return ["-", "Completed"];
+    const days = Math.floor(diffMs / (24*60*60*1000));
+    const hours = Math.floor(diffMs / (60*60*1000));
+    const mins = Math.floor(diffMs/(60*1000));
+    const secs = Math.floor(diffMs/1000);
+    if (days != 0){
+      return [days, "days to go"];
+    }
+    if (hours != 0){
+      return [hours, "hours to go"];
+    }
+    if (mins != 0){
+      return [mins, "mins to go"]
+    }
+    return [secs, "secs to go"];
 }
 function updatePaper(id){
-    countNumbers[id].textContent = daysLeft(dates[id]);
+    const [number, label] = timeLeft(dates[id]);
+    countNumbers[id].textContent = number;
+    countLabels[id].textContent = label;
+    countLabels[id].parentElement.parentElement.classList.toggle("soon", label != "days to go" && label != "Completed");
+    countLabels[id].parentElement.parentElement.classList.toggle("done", label == "Completed");
 }
 function updatePapers(){
     for (let i = 0; i < dates.length; i++){
         updatePaper(i);
   }
     console.log("Updated papers");
-    setTimeout(updatePapers, 10*1000);
+    setTimeout(updatePapers, 500);
 }
 document.addEventListener("DOMContentLoaded", ()=> {
     loadPapers();

@@ -18,6 +18,15 @@ body {
 }
 .subject h1{
     text-align : center;
+    margin-bottom : 0px;
+}
+.subject small{
+    display : block;
+    text-align : center;
+    font-size : 1.5em;
+    font-family : monospace;
+    color : #CCC;
+    margin-bottom : 8px;
 }
 .paper {
     background : hsl(var(--h), var(--s), 35%);
@@ -54,6 +63,19 @@ body {
     flex-direction : column;
     justify-content : center;
 }
+.paper.soon .countdown{
+    background : hsl(var(--h), var(--s), 47%);
+}
+.paper.soon{
+  background : hsl(var(--h), var(--s), 43%);
+}
+
+.paper.done .countdown{
+  background : hsl(var(--h), calc(var(--s) * 0.7), 36%);
+}
+.paper.done{
+  background : hsl(var(--h), calc(var(--s) * 0.7), 34%);
+}
 .count-number {
     font-size : 1.2rem;
     margin-top : 5px;
@@ -64,3 +86,4 @@ body {
     margin-top : 5px;
     margin-bottom : 5px;
 }
+
