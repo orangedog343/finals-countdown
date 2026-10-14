@@ -72,6 +72,12 @@ function filter_papers(papers){
       if (!(paper in paper_ref[subject])){
         document.write(`<h1> ERROR : PAPER ${subject}p${paper} DOES NOT EXIST IN TIMETABLE.</h1>`)
       }
+      if ("subpapers" in paper_ref[subject][paper]){
+        paper_ref[subject][paper].subpapers.forEach(subpaper=>{
+          new_codes_papers[`p${subpaper}`] = paper_ref[subject][subpaper];
+        })
+        continue;
+      }
       new_codes_papers[`p${paper}`] = paper_ref[subject][paper];
     }
 
